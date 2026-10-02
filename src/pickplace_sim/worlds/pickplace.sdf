@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <world name="pickplace">
+  <scene>
+  <ambient>0.6 0.6 0.6 1</ambient>
+  <background>0.8 0.8 0.8 1</background>
+  <shadows>false</shadows>
+  </scene>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin filename="gz-sim-scene-broadcaster-system"
+            name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-user-commands-system"
+            name="gz::sim::systems::UserCommands"/>
+
+    <light type="directional" name="sun">
+    <pose>0 0 5 0 0 0</pose>
+    <direction>0 0 -1</direction>
+    <diffuse>0.8 0.8 0.8 1</diffuse>
+    <specular>0.1 0.1 0.1 1</specular>
+    <cast_shadows>false</cast_shadows>
+    </light>
+
+    <model name="ground">
+      <static>true</static>
+      <link name="link">
+        <collision name="c"><geometry><plane><normal>0 0 1</normal></plane></geometry></collision>
+        <visual name="v"><geometry><plane><normal>0 0 1</normal><size>10 10</size></plane></geometry></visual>
+      </link>
+    </model>
+
+    <model name="table">
+      <static>true</static>
+      <pose>0.6 0 0.2 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>0.8 1.0 0.4</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 1.0 0.4</size></box></geometry><material><diffuse>0.7 0.6 0.5 1</diffuse><ambient>0.7 0.6 0.5 1</ambient></material></visual>
+      </link>
+    </model>
+
+    <model name="cube_red">
+      <pose>0.5 0.1 0.43 0 0 0</pose>
+      <link name="link">
+        <inertial><mass>0.05</mass></inertial>
+        <collision name="c"><geometry><box><size>0.05 0.05 0.05</size></box></geometry></collision>
+        <visual name="v">
+          <geometry><box><size>0.05 0.05 0.05</size></box></geometry>
+          <material><diffuse>1 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="overhead_camera">
+      <static>true</static>
+      <pose>0.6 0 1.2 0 1.5708 0</pose>
+      <link name="link">
+        <sensor name="rgbd" type="rgbd_camera">
+          <camera>
+            <horizontal_fov>1.05</horizontal_fov>
+            <image><width>320</width><height>240</height></image>
+            <clip><near>0.1</near><far>3.0</far></clip>
+          </camera>
+          <always_on>1</always_on>
+          <update_rate>10</update_rate>
+          <topic>camera</topic>
+        </sensor>
+      </link>
+    </model>
+  </world>
+</sdf>
