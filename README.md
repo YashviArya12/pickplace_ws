@@ -4,3 +4,4 @@
 **Metrics:** grasp success rate, detection mAP, cycle time, pose error (mm).
 **v1 constraint:** top-down grasps only.
 ![Overhead camera view](docs/rviz_camera_3obj.png)
+![UR5e in Gazebo](docs/gazebo_ur5e_scene.png)
