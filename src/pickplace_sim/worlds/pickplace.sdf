@@ -25,6 +25,7 @@
 
     <model name="ground">
       <static>true</static>
+      <pose>0 0 -0.4 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><plane><normal>0 0 1</normal></plane></geometry></collision>
         <visual name="v"><geometry><plane><normal>0 0 1</normal><size>10 10</size></plane></geometry></visual>
@@ -33,15 +34,15 @@
 
     <model name="table">
       <static>true</static>
-      <pose>0.6 0 0.2 0 0 0</pose>
+      <pose>0.5 0 -0.2 0 0 0</pose>
       <link name="link">
-        <collision name="c"><geometry><box><size>0.8 1.0 0.4</size></box></geometry></collision>
-        <visual name="v"><geometry><box><size>0.8 1.0 0.4</size></box></geometry><material><diffuse>0.7 0.6 0.5 1</diffuse><ambient>0.7 0.6 0.5 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>1.4 1.0 0.4</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>1.4 1.0 0.4</size></box></geometry><material><diffuse>0.7 0.6 0.5 1</diffuse><ambient>0.7 0.6 0.5 1</ambient></material></visual>
       </link>
     </model>
 
     <model name="cube_red">
-      <pose>0.5 0.1 0.43 0 0 0</pose>
+      <pose>0.5 0.1 0.03 0 0 0</pose>
       <link name="link">
         <inertial><mass>0.05</mass></inertial>
         <collision name="c"><geometry><box><size>0.05 0.05 0.05</size></box></geometry></collision>
@@ -53,7 +54,7 @@
     </model>
 
     <model name="cylinder_green">
-      <pose>0.6 -0.1 0.44 0 0 0</pose>
+      <pose>0.6 -0.1 0.045 0 0 0</pose>
       <link name="link">
         <inertial><mass>0.05</mass></inertial>
         <collision name="c"><geometry><cylinder><radius>0.025</radius><length>0.08</length></cylinder></geometry></collision>
@@ -65,7 +66,7 @@
     </model>
 
     <model name="box_blue">
-      <pose>0.7 0.15 0.425 0 0 0</pose>
+      <pose>0.7 0.15 0.03 0 0 0</pose>
       <link name="link">
         <inertial><mass>0.05</mass></inertial>
         <collision name="c"><geometry><box><size>0.06 0.04 0.05</size></box></geometry></collision>
@@ -78,7 +79,7 @@
 
     <model name="bin_pad">
       <static>true</static>
-      <pose>0.7 -0.3 0.405 0 0 0</pose>
+      <pose>0.7 -0.3 0.005 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.2 0.2 0.01</size></box></geometry></collision>
         <visual name="v">
@@ -90,7 +91,7 @@
 
     <model name="overhead_camera">
       <static>true</static>
-      <pose>0.6 0 1.2 0 1.5708 0</pose>
+      <pose>0.6 0 0.8 0 1.5708 0</pose>
       <link name="link">
         <sensor name="rgbd" type="rgbd_camera">
           <camera>
