@@ -1,8 +1,4 @@
 # Vision-Guided Pick-and-Place (ROS 2 + Gazebo + MoveIt 2)
-![Arm moving above the cube](docs/pickplace_demo.gif)
-
-*UR5e performing a pick-and-place motion sequence in Gazebo: above the cube, descend, lift, move to the drop pad, descend, lift, and return to the ready pose. Planned with MoveIt 2 and driven by a Python node using pymoveit2.*
-
 
 ![Arm moving above the cube](docs/hover_demo.gif)
 
