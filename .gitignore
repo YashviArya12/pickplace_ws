@@ -3,3 +3,8 @@ install/
 log/
 .vscode/
 src/pymoveit2/
+src/pymoveit2/
+.vscode/
+docs/*.mp4
+src/pymoveit2/
+.vscode/
