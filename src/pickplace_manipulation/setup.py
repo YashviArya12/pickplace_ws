@@ -18,9 +18,10 @@ setup(
     description='Manipulation nodes for the pick-and-place project',
     license='MIT',
     tests_require=['pytest'],
-    entry_points={
+        entry_points={
         'console_scripts': [
             'move_above_cube = pickplace_manipulation.move_above_cube:main',
+            'pick_place_sequence = pickplace_manipulation.pick_place_sequence:main',
         ],
     },
 )
