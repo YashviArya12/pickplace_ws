@@ -12,3 +12,6 @@ dataset/
 docs/*.mp4
 src/pymoveit2/
 .vscode/
+docs/*.mp4
+src/pymoveit2/
+.vscode/
