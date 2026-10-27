@@ -1,5 +1,6 @@
 # Vision-Guided Pick-and-Place (ROS 2 + Gazebo + MoveIt 2)
 ![Arm moving above the cube](docs/hover_demo.gif)
+
 *UR5e planning and moving above the red cube using MoveIt 2 and a Python node.*
 
 **Task:** Pick 3 object types (cube, cylinder, box) from a table and place them in a bin.
