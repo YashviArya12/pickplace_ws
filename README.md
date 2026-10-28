@@ -9,7 +9,7 @@
 | Simulation cell (UR5e, table, 3 objects, overhead RGB-D camera) | Done |
 | MoveIt 2 motion planning with Gazebo execution | Done |
 | Pick-and-place motion sequence (Cartesian descend/lift) | Done |
-| YOLOv8 object detection on synthetic data | In progress |
+| YOLOv8 object detection on synthetic data | Dataset Generated, Training next |
 | Camera-to-robot 3D localization | Planned |
 | Gripper and grasp execution | Planned |
 | Evaluation (grasp success rate, detection mAP) | Planned |

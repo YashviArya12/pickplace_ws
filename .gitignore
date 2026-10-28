@@ -15,3 +15,4 @@ src/pymoveit2/
 docs/*.mp4
 src/pymoveit2/
 .vscode/
+dataset.zip
